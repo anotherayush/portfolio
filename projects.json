@@ -1,0 +1,84 @@
+{
+  "projects": [
+    {
+      "id": "telestorage",
+      "title": "TeleStorage",
+      "short_description": "Secure file storage using Telegram",
+      "full_description": "TeleStorage is a Windows client that allows users to upload and download encrypted files to and from their Telegram channel, creating a secure and virtually limitless personal cloud storage system.",
+      "year": 2024,
+      "tools": ["Python", "QT", "SQL", "Telegram API", "Cryptography"],
+      "image": "../images/telestorage.webp",
+      "featured": true
+    },
+    {
+      "id": "gesture",
+      "title": "Gesture - Controls - Media",
+      "short_description": "Windows client uses gestures for controlling media across various platforms.",
+      "full_description": "This project is a Windows client that utilizes the webcam to recognize and interpret users' hand gestures, including finger counts and finger placements relative to the webcam's top, bottom, right, or left. This intuitive system allows users to control media playback across various platforms, from YouTube and Netflix to locally downloaded content in VLC Media Player. By leveraging gesture-based controls, it offers a novel and interactive way to manage digital media seamlessly.",
+      "year": 2023,
+      "tools": ["Tkinter", "OpenCV", "PyautoGUI", "Tensorflow"],
+      "image": "../images/gesture.webp",
+      "featured": false
+    },
+    {
+      "id": "torrent",
+      "title": "Torrent Client",
+      "short_description": "A Torrent client made from scratch, with peer-to-peer data transfer and management.",
+      "full_description": "This project is a Windows client that utilizes the webcam to recognize and interpret users' hand gestures, including finger counts and finger placements relative to the webcam's top, bottom, right, or left. This intuitive system allows users to control media playback across various platforms, from YouTube and Netflix to locally downloaded content in VLC Media Player. By leveraging gesture-based controls, it offers a novel and interactive way to manage digital media seamlessly.",
+      "year": 2024,
+      "tools": ["Python", "Bittorrent Protocol","Socket Programming"],
+      "image": "../images/torrent.webp",
+      "featured": true
+    },
+    {
+      "id": "pybrawl",
+      "title": "PyBrawl",
+      "short_description": "A Python-based 2D fighting game",
+      "full_description": "PyBrawl is a 2D fighting game developed using Python and the Pygame library. It features multiple characters, various fighting stages, and a robust combat system.",
+      "year": 2024,
+      "tools": ["Python - Pygame", "Bosca Ceoil - Music", "Pixelorama - Tiled Map Editor"],
+      "image": "../images/pybrawl.webp",
+      "featured": false
+    },
+    {
+      "id": "FRAS",
+      "title": "FRAS",
+      "short_description": "Face Recognition based Attendance System.",
+      "full_description": "This project involves a Windows client that revolutionizes traditional attendance methods through facial recognition technology. By leveraging this advanced approach, it significantly enhances efficiency in marking attendance. The system maintains a comprehensive database of registered users, cataloging their facial features, and employs sophisticated algorithms to train a model capable of accurately recognizing these faces. This innovative solution not only streamlines the attendance process but also provides a cutting-edge alternative to conventional methods.",
+      "year": 2023,
+      "tools": ["Python", "OpenCV", "SQL"],
+      "image": "../images/fras.webp",
+      "featured": false
+    },
+    {
+      "id": "quiz",
+      "title": "React Quiz in React",
+      "short_description": "A Quiz on React made using Reactjs",
+      "full_description": "This project is a dynamic quiz website developed using React. It offers an engaging and responsive interface for users to create, take, and manage quizzes. With real-time scoring and instant feedback, the platform leverages React’s component-based architecture for smooth and scalable interactions. Features include customizable quizzes, various question formats, and detailed performance analytics, providing an interactive and efficient tool for both educational and casual use.",
+      "year": 2023,
+      "tools": ["ReactJS", "Bootstrap"],
+      "image": "../images/quiz.webp",
+      "featured": false
+    },
+    {
+      "id": "temp",
+      "title": "TempBoards",
+      "short_description": "Instantly generate a collaborative space for group of people over a website.",
+      "full_description": "This website generates collaborative spaces for group of people to share content, images, and messages, on a single screen shared to everyone, without the need of signing up for the service.",
+      "year": 2024,
+      "tools": ["HTML & Tailwind CSS", "Flask", "Socket Programming"],
+      "image": "../images/temp.webp",
+      "featured": true
+    },
+    {
+      "id": "shell",
+      "title": "BeeShell",
+      "short_description": "Simple Shell program for my computer to automate or do tasks by commands.",
+      "full_description": "This project is a shell program aimed to simplify my daily tasks or automating them by entering commands. Example - Opening certain folders directly in VScode, Creating bookmarks but for different applications, Searching directly in terminal which will open the browser and show results, Different files conversions, etc.",
+      "year": 2024,
+      "tools": ["Python", "OS"],
+      "image": "../images/shell.webp",
+      "featured": false
+    }
+  ]
+}

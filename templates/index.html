@@ -1,0 +1,168 @@
+{% extends "base.html" %}
+
+{% block title %}Ayush Srivastava - Portfolio{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+<style>
+    #animationCanvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: #ffffff;
+    }
+
+    /* Ensure content is visible over the canvas */
+    section {
+        position: relative;
+        z-index: 1;
+        background: transparent;
+    }
+
+    /* Add some text shadow to make text more readable over the background */
+    h1, h2, p, .lead {
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+</style>
+{% endblock %}
+{%block body %}
+
+{% block navbar_items %}
+<li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+<li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+<li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact">Contact Me</a></li>
+{% endblock %}
+
+{% block content %}
+<section class="hero min-vh-100 d-flex align-items-center">
+  <div class="container">
+      <div class="row align-items-center">
+          <div class="col-md-6">
+              <h1 class="display-4 mb-4 fw-bold">
+                  <span id="typed-text"></span>
+              </h1>
+          </div>
+          <div class="col-md-6 text-md-end">
+              <p class="lead mb-3"><span id="typed-location1"></span></p>
+              <p class="lead mb-3"><span id="typed-location2"></span></p>
+              <p class="lead mb-4"><span id="typed-location3"></span></p>
+              <div class="hero-buttons">
+                  <a href="#contact" class="btn btn-primary me-3">Contact Me</a>
+                  <a href="#projects" class="btn btn-outline-primary">See My Work</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<div class="project-card-wrapper">
+<section id="projects" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Selected Works</h2>
+    <div class="row">
+      {% for project in featured_projects %}
+        <div class="col-md-4 mb-4">
+          <div class="project-card">
+            <img src="{{ url_for('static', filename='images/' + project.image) }}" class="card-img-top" alt="{{ project.title }}">
+            <div class="card-body">
+              <h5 class="card-title">{{ project.title }}</h5>
+              <p class="card-text">{{ project.short_description }}</p>
+              <a href="{{ url_for('project', project_id=project.id) }}" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="text-center mt-4">
+      <a href="{{ url_for('archive') }}" class="btn btn-primary">View Full Projects Archive</a>
+    </div>
+  </div>
+</section>
+</div>
+
+<section id="skills" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Skills</h2>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="border-beam-container">
+          <div class="border-beam-content">
+        <div class="skills-card">
+          <h3 class="skills-title"><center> Technical Skills</center></h3>
+          <ul class="skills-list">
+            <li>Java</li>
+            <li>Python</li>
+            <li>HTML5 & CSS3</li>
+            <li>Bootstrap & Tailwind CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Git</li>
+            <li>SQL</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+      </div>
+      <div class="col-md-6 mb-4">
+        <div class="skills-card">
+          <h3 class="skills-title"><center>Soft Skills </center></h3>
+          <ul class="skills-list">
+            <li>Problem Solving</li>
+            <li>Leadership</li>
+            <li>Goal-Oriented</li>
+            <li>Adaptability</li>
+            <li>Creativity</li>
+            <li>Critical Thinking</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="certifications" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Certifications</h2>
+    <div class="certification-slider"></div>
+  </div>
+</section>
+
+<section id="contact" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Contact Me</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <form id="contactForm" name="contact" method="POST" data-netlify="true" onsubmit="submit">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+{% endblock %}
+{% endblock %}
